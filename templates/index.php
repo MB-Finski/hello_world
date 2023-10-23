@@ -12,7 +12,7 @@
             align-items: center;
             height: 100%;
         }
-
+        /* Style the header with a background color and some padding */
         myHeader {
             background-color: #4CAFF0;
             color: #fff;
@@ -27,21 +27,26 @@
 <body>
     <myPageContent>
         <?php
-        if (isset($_GET['myMessage'])) {
+        if (isset($_GET['getParameter']) && $_GET['getParameter'] !== '') {
             // Display the message if it is specified
-            echo '<myHeader>' . $_GET['myMessage'] . '</myHeader>';
+            echo    '<myHeader>' . $_GET['getParameter'] . '</myHeader>';
+            // Display a reset button
+            $submitGetParameter = '';
+            $buttonText = 'Reset';
         } else {
             // If no get parameters were specified, display a button
             // that when clicked, reloads the page with the get parameter:
             // myMessage => "HelloWorld"
-            echo '
-            <myHeader>Press the button!</myHeader>
-            <form method="GET" action="">
-                <input type="hidden" name="myMessage" value="HelloWorld!">
-                <button type="submit" name="myButton">Click Me</button>
-            </form> ';
+            echo    '<myHeader>Press the button!</myHeader>';
+            // Display a "Click me" button
+            $submitGetParameter = 'HelloWorld!';
+            $buttonText = 'Click Me';
         }
         ?>
+        <!-- Display the button -->
+        <form method="GET" action="">
+            <button type="submit" name="getParameter" value="<?php echo $submitGetParameter;?>"><?php echo $buttonText;?></button>
+        </form>
     </myPageContent>
 </body>
 </html>
