@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<info>
+    <id>hello_world</id>
+    <name>Hello World App</name>
+    <summary>A simple Hello World app for Nextcloud</summary>
+    <description>A simple Hello World app for Nextcloud. Populates a top menu item with an associated page with a HelloWrold-button.</description>
+    <version>1.0</version>
+    <author>Your Name</author>
+    <licence>agpl</licence>
+    <namespace>HelloWorld</namespace>
+    <category>integration</category>
+    <navigations>
+        <navigation>
+            <name>Hello World</name>
+            <route>hello_world.page.index</route>
+        </navigation>
+    </navigations>
+</info>
