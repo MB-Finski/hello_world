@@ -10,8 +10,18 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100%;
         }
+
+        myHeader {
+            background-color: #4CAFF0;
+            color: #fff;
+            border-radius: 10px; 
+            padding: 10px;
+            font-size: 36px; 
+            margin-bottom: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -19,13 +29,13 @@
         <?php
         if (isset($_GET['myMessage'])) {
             // Display the message if it is specified
-            echo '<h1 style="font-size: 36px;">' . $_GET['myMessage'] . '</h1>';
+            echo '<myHeader>' . $_GET['myMessage'] . '</myHeader>';
         } else {
             // If no get parameters were specified, display a button
             // that when clicked, reloads the page with the get parameter:
             // myMessage => "HelloWorld"
             echo '
-            <p><h1 style="font-size: 36px; margin-bottom: 20px;">Press the button!</h1></p>
+            <myHeader>Press the button!</myHeader>
             <form method="GET" action="">
                 <input type="hidden" name="myMessage" value="HelloWorld!">
                 <button type="submit" name="myButton">Click Me</button>
