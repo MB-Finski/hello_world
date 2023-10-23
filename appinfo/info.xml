@@ -12,7 +12,7 @@
     <navigations>
         <navigation>
             <name>Hello World</name>
-            <route>hello_world.page.index</route>
+            <route>hello_world.page.show</route>
         </navigation>
     </navigations>
 </info>
