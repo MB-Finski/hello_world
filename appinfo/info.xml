@@ -1,18 +1,24 @@
 <?xml version="1.0"?>
-<info>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <!--
+    SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@gmail.com>
+    SPDX-License-Identifier: CC0-1.0
+    -->
     <id>hello_world</id>
     <name>Hello World App</name>
     <summary>A simple Hello World app for Nextcloud</summary>
     <description>A simple Hello World app for Nextcloud. Populates a top menu item with an associated page with a HelloWrold-button.</description>
     <version>1.0</version>
-    <author>Your Name</author>
     <licence>agpl</licence>
+    <author>Sami Finnilä</author>
     <namespace>HelloWorld</namespace>
     <category>integration</category>
+    <bugs>https://github.com/MB-Finski/hello_world/issues</bugs>
     <navigations>
         <navigation>
             <name>Hello World</name>
-            <route>hello_world.page.show</route>
+            <route>hello_world.page.index</route>
         </navigation>
     </navigations>
 </info>
